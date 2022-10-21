@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --body: #f6f6f6;
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale: hsl(225, 100%, 98%);
+    --ds-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --grid-columns: 1;
+    --font-wrap: 'Red Hat Display', sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+body {
+  min-height: 100vh;
+  background: url(/images/pattern-background-desktop.svg) var(--pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  font-family:var(--font-wrap);
+  font-size: 16px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__content {
+  padding: 32px;
+  display: grid;
+  gap: 16px;
+}
+
+.card__title,
+.card__text {
+  text-align: center;
+  font-family: var(--font-wrap);
+}
+
+.card__title {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.card__text {
+  font-weight: 500;
+  color:var(--ds-blue);
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--pale-blue);
+  padding: 16px;
+
+}
+
+.card__plan {
+  display: flex;
+  gap: 16px;
+}
+
+.card__name,
+.card__price {
+  font-size: 16px;
+  font-family: var(--font-wrap);
+}
+
+.card__action {
+  padding-top: 13px;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.card__proceed,
+.card__cancel {
+  font-family: var(--font-wrap);
+  font-size: 16px;
+  padding: 11px;
+}
+
+.card__proceed {
+  background: var(--bright-blue);
+  box-shadow: 0 0 11px var(--dark-blue);
+  opacity: 5;
+  border-radius: 8px;
+  border: none;
+  color: var(--very-pale);
+
+}
+
+.card__cancel {
+  color: var(--ds-blue);
+  background: none;
+  border:none;
+  appearance: none;
+}
+
+.card__proceed:hover {
+  text-decoration: underline;
+  opacity:0.5;
+}
+
+.card__cancel:hover {
+  text-decoration: underline;
+  color:var(--dark-blue);
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+ /* 768px is a tablet */
+/* 1024px is a laptop */
+/* 1200px is a desktop */
+/* 1440px is a large desktop */
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  :root {
+      --grid-columns: 1;  
+  }
+  
+  }
